@@ -1,0 +1,6 @@
+print ('Hello, World')
+print (5 + 3)
+print (5 * 3)
+print (2345 * 6789)
+print ('cat' + 'dog')
+print ('Hello ' * 20)
