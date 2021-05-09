@@ -1,3 +1,3 @@
 print("Введите свое имя: ")
 somebody = input()
-print("Привет, ", somebody, ", как дела?")
+print("Привет,", somebody, ", как дела?")
