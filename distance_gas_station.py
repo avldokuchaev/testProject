@@ -5,3 +5,19 @@
 # Каков размер вашего бензобака в литрах?
 # Сколько горючего в бензобаке (в процентах)?
 # Сколько километров проходит автомобиль на одном литре бензина?
+tank_size = float(input("Введите размер бака вашего автомобиля в литрах: "))
+gas_in_tank = float(input("Введите процент заполненности вашего бака: "))
+km_with_liter = float(input("Сколько километров проходит автомобиль на одном литре бензина: "))
+distance_to_next_station = 200
+km_to_this_tank = tank_size * km_with_liter
+gas_in_tank_now = tank_size * (gas_in_tank / 100)
+km_to_this_tank_now = gas_in_tank_now * km_with_liter
+
+print("На полном баке вы можете проехать: ", km_to_this_tank, "км.")
+print("В вашем баке сейчас: ", gas_in_tank_now, "л.")
+print("На этом количестве бензина вы можете проехать: ", km_to_this_tank_now, "км.")
+
+if km_to_this_tank_now <= distance_to_next_station:
+    print("Вам нужно заправиться!")
+else:
+    print("Можете ехать дальше без заправки!")
