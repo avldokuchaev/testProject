@@ -19,6 +19,7 @@ km_to_this_tank_now = (gas_in_tank_now * 100) / km_with_liter
 print("На полном баке вы можете проехать: ", round(km_to_this_tank, 2), "км.")
 print("В вашем баке сейчас: ", round(gas_in_tank_now, 2), "л.")
 print("На этом количестве бензина вы можете проехать: ", round(km_to_this_tank_now, 2), "км.")
+print("Следующая заправка через ", distance_to_next_station, "км.")
 
 if km_to_this_tank_now <= distance_to_next_station:
     print("Вам нужно заправиться!")
