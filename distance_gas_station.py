@@ -7,13 +7,13 @@
 # Сколько километров проходит автомобиль на одном литре бензина?
 tank_size = float(input("Введите размер бака вашего автомобиля в литрах: "))
 gas_in_tank = float(input("Введите процент заполненности вашего бака: "))
-km_with_liter = float(input("Сколько километров проходит автомобиль на одном литре бензина: "))
+km_with_liter = float(input("Сколько литров бензина тратит ваш автомобиль на 100 км: "))
 distance_to_next_station = 200
-km_to_this_tank = tank_size * km_with_liter
+km_to_this_tank = (tank_size * 100) / km_with_liter
 gas_in_tank_now = tank_size * (gas_in_tank / 100)
 km_to_this_tank_now = gas_in_tank_now * km_with_liter
 
-print("На полном баке вы можете проехать: ", km_to_this_tank, "км.")
+print("На полном баке вы можете проехать: ", round(km_to_this_tank, 2), "км.")
 print("В вашем баке сейчас: ", round(gas_in_tank_now, 2), "л.")
 print("На этом количестве бензина вы можете проехать: ", round(km_to_this_tank_now, 2), "км.")
 
