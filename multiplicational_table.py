@@ -7,3 +7,4 @@ i = 0
 while i < 10:
     i += 1
     print(i, "* ", number_for_multipl, "=", number_for_multipl * i)
+
