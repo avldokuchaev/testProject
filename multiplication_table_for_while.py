@@ -8,3 +8,4 @@ i = 0
 while i < number_1_for_multiple:
     print(i, "* ", number_for_multipl, "=", number_for_multipl * i)
     i += 1
+
