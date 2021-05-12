@@ -6,5 +6,5 @@ number_1_for_multiple = int(input("Введите число до какого �
 #     print(i, "* ", number_for_multipl, "=", number_for_multipl * i)
 i = 0
 while i < number_1_for_multiple:
-    i += 1
     print(i, "* ", number_for_multipl, "=", number_for_multipl * i)
+    i += 1
