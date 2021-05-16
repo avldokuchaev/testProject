@@ -7,3 +7,4 @@ for i in range(initial_time, 0, -1):
     print()
     time.sleep(1)
 print("Пуск!")
+
