@@ -1,5 +1,6 @@
 import time
-for i in range(10, 0, -1):
+initial_time = int(input("Сколько секунд обратног отчета? "))
+for i in range(initial_time, 0, -1):
     print(i)
     time.sleep(1)
 print("Пуск!")
