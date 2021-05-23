@@ -11,7 +11,9 @@ print("Это имена: ", end=" ")
 for names in name_list:
     print(names, end=" ")
 print()
-name_list.sort()
-print("Эти имена отсортированы: ", end=" ")
-for names in name_list:
-    print(names, end=" ")
+# name_list.sort()
+# print("Эти имена отсортированы: ", end=" ")
+# for names in name_list:
+#     print(names, end=" ")
+# print()
+print("Третье введенное имя: ", name_list[2])
