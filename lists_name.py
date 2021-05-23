@@ -10,3 +10,8 @@ name_list.append(input("Введите пятое имя: "))
 print("Это имена: ", end=" ")
 for names in name_list:
     print(names, end=" ")
+print()
+name_list.sort()
+print("Эти имена отсортированы: ", end=" ")
+for names in name_list:
+    print(names, end=" ")
