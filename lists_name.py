@@ -16,4 +16,11 @@ print()
 # for names in name_list:
 #     print(names, end=" ")
 # print()
-print("Третье введенное имя: ", name_list[2])
+# print("Третье введенное имя: ", name_list[2])
+name_number = int(input("Какое имя нужно заменить? (1-5) "))
+name_number_right = name_number - 1
+del name_list[name_number_right]
+name_list.insert(name_number_right, input("Новое имя: "))
+print("Это имена: ", end=" ")
+for names in name_list:
+    print(names, end=" ")
