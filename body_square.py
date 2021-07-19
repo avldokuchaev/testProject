@@ -6,7 +6,7 @@ def square_body_chemotherapy():
     weight = float(easygui.enterbox("Введите вес в килограммах: "))
     square_body = 0.0167 * weight ** 0.5 * height ** 0.5
     square_body_result = round(square_body, 2)
-    message_result = easygui.msgbox("Площадь поверхности тела = " + str(square_body_result) + " кубических метров")
-    print(message_result)
+    return(square_body_result)
 
-square_body_chemotherapy()
+print(easygui.msgbox("Площадь поверхности тела = " + str(square_body_chemotherapy()) + " кубических метров"))
+
