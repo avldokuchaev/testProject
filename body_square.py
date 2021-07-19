@@ -18,7 +18,9 @@ doksorubicin = 60
 ciklophosphamid = 600
 res = square_body_chemotherapy()
 doksorubicin_doza = doksorubicin * res
-print(easygui.msgbox(square_body_chemotherapy()))
-print(easygui.msgbox(round(doksorubicin_doza, 0)))
+ciklophosphamid_doza = ciklophosphamid * res
+print(easygui.msgbox("Площадь поверхности тела = " + str(square_body_chemotherapy()) + " квадратных метров"))
+print(easygui.msgbox("Необходимая доза Доксорубицина = " + str(round(doksorubicin_doza, 0)) + " мг"))
+print(easygui.msgbox("Необходимая доза Циклофосфамида = " + str(round(ciklophosphamid_doza, 0)) + " мг"))
 
 
