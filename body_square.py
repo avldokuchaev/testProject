@@ -1,9 +1,10 @@
 # Рассчет площади поверхности тела
 import easygui
 
+height = easygui.enterbox("Введите рост в сантиметрах: ")
+weight = easygui.enterbox("Введите вес в килограммах: ")
+
 def square_body_chemotherapy():
-    height = easygui.enterbox("Введите рост в сантиметрах: ")
-    weight = easygui.enterbox("Введите вес в килограммах: ")
     try:
         height_float = float(height)
         weight_float = float(weight)
@@ -13,5 +14,11 @@ def square_body_chemotherapy():
     except:
         return ("Вы ввели не число!")
 
-print(easygui.msgbox("Площадь поверхности тела = " + str(square_body_chemotherapy()) + " кубических метров"))
+doksorubicin = 60
+ciklophosphamid = 600
+res = square_body_chemotherapy()
+doksorubicin_doza = doksorubicin * res
+print(easygui.msgbox(square_body_chemotherapy()))
+print(easygui.msgbox(round(doksorubicin_doza, 0)))
+
 
