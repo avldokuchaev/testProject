@@ -8,12 +8,12 @@ def square_body_chemotherapy(weight_float, height_float):
 
 height = float(input("Введите рост в сантиметрах: "))
 weight = float(input("Введите вес в килограммах: "))
-schema_therapy = input("Введите название схемы на латинице (AC): ")
+schema_therapy = input("Введите название схемы (AC): ")
 reduction_doze = int(input("Если нужна редукция дозы, введите цифру процентов, иначе введите \"0\": "))
 
 res = square_body_chemotherapy(height, weight)
 
-if schema_therapy.upper() == "AC" and reduction_doze == 0:
+if schema_therapy.upper() == "AC" or schema_therapy.upper() == "АС" and reduction_doze == 0:
     doksorubicin = 60
     ciklophosphamid = 600
     doksorubicin_doza = doksorubicin * res
@@ -21,7 +21,7 @@ if schema_therapy.upper() == "AC" and reduction_doze == 0:
     print(f"Площадь поверхности тела = {str(res)} квадратных метров")
     print(f"Необходимая доза Доксорубицина = {str(round(doksorubicin_doza))} мг")
     print(f"Необходимая доза Циклофосфамида = {str(round(ciklophosphamid_doza))} мг")
-elif schema_therapy.upper() == "AC" and reduction_doze != 0:
+elif schema_therapy.upper() == "AC" or schema_therapy.upper() == "АС" and reduction_doze != 0:
     doksorubicin = 60
     ciklophosphamid = 600
     doksorubicin_doza = (doksorubicin * res) - ((doksorubicin * res) * (reduction_doze / 100))
