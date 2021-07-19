@@ -7,7 +7,7 @@ def square_body_chemotherapy(weight_float, height_float):
 
 height = float(input("Введите рост в сантиметрах: "))
 weight = float(input("Введите вес в килограммах: "))
-schema_therapy = input("Введите название схемы (AC, FLOT): ")
+schema_therapy = input("Введите название схемы (AC): ")
 reduction_doze = float(input("Если нужна редукция дозы, введите цифру процентов, иначе введите 0: "))
 
 res = square_body_chemotherapy(height, weight)
