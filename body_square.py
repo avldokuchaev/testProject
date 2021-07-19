@@ -21,4 +21,4 @@ print("Площадь поверхности тела = " + str(square_body_chem
 print("Необходимая доза Доксорубицина = " + str(round(doksorubicin_doza, 0)) + " мг")
 print("Необходимая доза Циклофосфамида = " + str(round(ciklophosphamid_doza, 0)) + " мг")
 
-
+k= input("Нажмите крестик для выхода!")
