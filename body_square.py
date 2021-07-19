@@ -1,24 +1,34 @@
 # Рассчет площади поверхности тела
-height = input("Введите рост в сантиметрах: ")
-weight = input("Введите вес в килограммах: ")
 
-def square_body_chemotherapy():
-    try:
-        height_float = float(height)
-        weight_float = float(weight)
-        square_body = 0.0167 * weight_float ** 0.5 * height_float ** 0.5
-        square_body_result = round(square_body, 2)
-        return (square_body_result)
-    except:
-        return ("Вы ввели не число!")
+def square_body_chemotherapy(weight_float, height_float):
+    square_body = 0.0167 * weight_float ** 0.5 * height_float ** 0.5
+    square_body_result = round(square_body, 2)
+    return (square_body_result)
 
-doksorubicin = 60
-ciklophosphamid = 600
-res = square_body_chemotherapy()
-doksorubicin_doza = doksorubicin * res
-ciklophosphamid_doza = ciklophosphamid * res
-print("Площадь поверхности тела = " + str(square_body_chemotherapy()) + " квадратных метров")
-print("Необходимая доза Доксорубицина = " + str(round(doksorubicin_doza, 0)) + " мг")
-print("Необходимая доза Циклофосфамида = " + str(round(ciklophosphamid_doza, 0)) + " мг")
+height = float(input("Введите рост в сантиметрах: "))
+weight = float(input("Введите вес в килограммах: "))
+schema_therapy = input("Введите название схемы (AC, FLOT): ")
+reduction_doze = float(input("Если нужна редукция дозы, введите цифру процентов, иначе введите 0: "))
 
-k= input("Нажмите крестик для выхода!")
+res = square_body_chemotherapy(height, weight)
+
+if schema_therapy == "AC" and reduction_doze == 0:
+    doksorubicin = 60
+    ciklophosphamid = 600
+    doksorubicin_doza = doksorubicin * res
+    ciklophosphamid_doza = ciklophosphamid * res
+    print("Площадь поверхности тела = " + str(res) + " квадратных метров")
+    print("Необходимая доза Доксорубицина = " + str(round(doksorubicin_doza, 0)) + " мг")
+    print("Необходимая доза Циклофосфамида = " + str(round(ciklophosphamid_doza, 0)) + " мг")
+elif schema_therapy == "AC" and reduction_doze != 0:
+    doksorubicin = 60
+    ciklophosphamid = 600
+    doksorubicin_doza = (doksorubicin * res) - ((doksorubicin * res) * (reduction_doze / 100))
+    ciklophosphamid_doza = (ciklophosphamid * res) - ((ciklophosphamid * res) * (reduction_doze / 100))
+    print("Площадь поверхности тела = " + str(res) + " квадратных метров")
+    print("Необходимая доза Доксорубицина = " + str(round(doksorubicin_doza, 0)) + " мг")
+    print("Необходимая доза Циклофосфамида = " + str(round(ciklophosphamid_doza, 0)) + " мг")
+else:
+    print("Вы ввели не ту схему!")
+
+k= input("Нажмите Enter для выхода! ")
