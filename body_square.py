@@ -19,8 +19,8 @@ if schema_therapy == "AC" and reduction_doze == 0:
     doksorubicin_doza = doksorubicin * res
     ciklophosphamid_doza = ciklophosphamid * res
     print(f"Площадь поверхности тела = {str(res)} квадратных метров")
-    print(f"Необходимая доза Доксорубицина = {str(round(doksorubicin_doza, 0))} мг")
-    print(f"Необходимая доза Циклофосфамида = {str(round(ciklophosphamid_doza, 0))} мг")
+    print(f"Необходимая доза Доксорубицина = {str(round(doksorubicin_doza))} мг")
+    print(f"Необходимая доза Циклофосфамида = {str(round(ciklophosphamid_doza))} мг")
 elif schema_therapy == "AC" and reduction_doze != 0:
     doksorubicin = 60
     ciklophosphamid = 600
@@ -28,9 +28,9 @@ elif schema_therapy == "AC" and reduction_doze != 0:
     ciklophosphamid_doza = (ciklophosphamid * res) - ((ciklophosphamid * res) * (reduction_doze / 100))
     print(f"Площадь поверхности тела = {str(res)} квадратных метров")
     print(
-        f"Необходимая доза Доксорубицина (редуцированная на {reduction_doze}%) = {str(round(doksorubicin_doza, 0))} мг")
+        f"Необходимая доза Доксорубицина (редуцированная на {reduction_doze}%) = {str(round(doksorubicin_doza))} мг")
     print(
-        f"Необходимая доза Циклофосфамида (редуцированная на {reduction_doze}%) = {str(round(ciklophosphamid_doza, 0))}"
+        f"Необходимая доза Циклофосфамида (редуцированная на {reduction_doze}%) = {str(round(ciklophosphamid_doza))}"
         f" мг")
 else:
     print("Вы ввели не ту схему!")
